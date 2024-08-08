@@ -1,7 +1,7 @@
 'use client'
 import { actuallyDLYT } from "./actions"
 
-const regex = new RegExp("^(http(s)??\:\/\/)?(www\.)?((youtube\.com\/watch\?v=)|(youtu.be\/))([a-zA-Z0-9\-_])+")
+const ytregex = new RegExp("https://www.youtube.com/watch\\?v=[a-zA-Z0-9]{1,11}")
 
 export function YTDL({setStatus} : {setStatus: (status:string) => void}) {
 
@@ -9,16 +9,14 @@ export function YTDL({setStatus} : {setStatus: (status:string) => void}) {
         const url:string = formData.get('yt-url')
 
         // Sanitize
-        /*if (!regex.test(url)) {
-            alert("Please put a Youtube URL")
+        if (!ytregex.test(url)) {
+            alert("Please put a proper Youtube URL")
             return
-        }*/
+        }
         
         // Grab file
         setStatus('Downloading...')
-        await actuallyDLYT(url)
-            .then(() => setStatus('Success!'))
-            .catch(() => setStatus('Error!'))
+        await actuallyDLYT(url, setStatus).catch(() => setStatus('Error!'))
     }
     
 

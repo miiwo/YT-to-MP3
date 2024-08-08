@@ -4,7 +4,7 @@ export function StatusViewer({status} : {status: string}) {
     
     return (
         <>
-            {status}
+            {status === "Error!" ? "There was an error downloading your file" : status}
         </>
     )
 }

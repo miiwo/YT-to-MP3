@@ -11,10 +11,10 @@ export default function Home() {
       
       <Navbar title={'Youtube to MP3'} navItems={navItems} />
 
-      <div className="text-center">
+      <div className="w-8/12 2xl:w-8/12 text-center">
         Welcome! This is a Youtube-to-MP3 downloader that is self hosted! 
-        Please paste your Youtube URL into the bar below and hit DL! The website will let you know when
-        it is done downloading.
+        Please paste your Youtube URL into the bar below and hit DL! <br />
+        The website will let you know when it is done downloading.
       </div>
 
       <YTLDLComponent />

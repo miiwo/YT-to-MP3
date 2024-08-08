@@ -1,11 +1,13 @@
 # Youtube to MP3 Web App
-For self use with family and friends.
+Wrapper Web App for YT-DLP. For self use with family and friends.
 
 This app will DL the files to a shared network location.
 
 
 ## Getting Started
 This app is compatible with Linux, and/or run via Docker on any OS.
+
+*Ensure you have `yt-dlp` installed if running from local Linux PC.*
 
 First, run the development server:
 
