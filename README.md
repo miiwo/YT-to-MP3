@@ -27,7 +27,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 Run the following commands in your terminal:
 
 ```bash
-docker build -t yt2mp3
+docker build -t yt2mp3 .
 
 docker run -d -p 3000:3000 -v <path/on/your/machine/here>:/opt/dls --name yt2mp3 yt2mp3
 ```
